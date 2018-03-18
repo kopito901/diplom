@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "form.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/form.scss"
+	],
+	"sourcesContent": [
+		".form {\n  display: flex;\n  flex-direction: column;\n}"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM,GACvB"
+}

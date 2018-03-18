@@ -41,4 +41,8 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.form {
+  display: flex;
+  flex-direction: column; }
+
 /*# sourceMappingURL=index.css.map */

@@ -11,8 +11,8 @@
     "react-scripts": "1.1.1"
   },
   "scripts": {
-    "build-css": "node-sass-chokidar src/frontend/styles/index.scss --output-style compressed > src/styles/index.css",
-    "watch-css": "node-sass-chokidar --watch --output src/styles/ --source-map true --source-map-contents src/frontend/styles",
+    "build-css": "node-sass-chokidar src/frontend/styles/index.scss --output-style compressed > public/styles/index.css",
+    "watch-css": "node-sass-chokidar --watch --output public/styles/ --source-map true --source-map-contents src/frontend/styles",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
