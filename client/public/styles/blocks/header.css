@@ -1,0 +1,45 @@
+.header {
+  background-color: #4a0072;
+  color: #fff; }
+  .header__wrapper {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .header__text {
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .header__text_title {
+      font-size: 22px;
+      line-height: 20px; }
+    .header__text_name {
+      font-size: 20px; }
+  .header__logo-wrapper {
+    display: flex; }
+  .header__logo_img a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: cover; }
+  .header__contacts {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right; }
+    .header__contacts span {
+      margin-bottom: 10px;
+      font-size: 16px; }
+      .header__contacts span:last-child {
+        margin-bottom: 0; }
+  .header__auth {
+    text-decoration: underline;
+    cursor: pointer; }
+    .header__auth:hover {
+      text-decoration: none; }
+
+/*# sourceMappingURL=header.css.map */

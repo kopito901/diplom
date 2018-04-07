@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "fonts.css",
+	"sources": [
+		"../../../src/frontend/styles/includes/fonts.scss"
+	],
+	"sourcesContent": [
+		"@font-face {\n  font-family: 'SansExtraBold';\n  src: url(../fonts/OpenSans-ExtraBold.ttf);\n}\n\n@font-face {\n  font-family: 'SansBold';\n  src: url(../fonts/OpenSans-Bold.ttf);\n}\n\n@font-face {\n  font-family: 'SansSemiBold';\n  src: url(../fonts/OpenSans-SemiBold.ttf);\n}\n\n@font-face {\n  font-family: 'SansRegular';\n  src: url(../fonts/OpenSans-Regular.ttf);\n}\n\n@font-face {\n  font-family: 'SansLight';\n  src: url(../fonts/OpenSans-Light.ttf);\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,UAAU;EACR,WAAW,EAAE,eAAe;EAC5B,GAAG,EAAE,oCAAoC;;AAG3C,UAAU;EACR,WAAW,EAAE,UAAU;EACvB,GAAG,EAAE,+BAA+B;;AAGtC,UAAU;EACR,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,mCAAmC;;AAG1C,UAAU;EACR,WAAW,EAAE,aAAa;EAC1B,GAAG,EAAE,kCAAkC;;AAGzC,UAAU;EACR,WAAW,EAAE,WAAW;EACxB,GAAG,EAAE,gCAAgC"
+}

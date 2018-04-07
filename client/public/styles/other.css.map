@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "other.css",
+	"sources": [
+		"../../src/frontend/styles/other.scss"
+	],
+	"sourcesContent": [
+		"body {\n  font-family: 'SansRegular';\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,aAAa,GAC3B"
+}

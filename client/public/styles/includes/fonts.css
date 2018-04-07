@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'SansExtraBold';
+  src: url(../fonts/OpenSans-ExtraBold.ttf); }
+
+@font-face {
+  font-family: 'SansBold';
+  src: url(../fonts/OpenSans-Bold.ttf); }
+
+@font-face {
+  font-family: 'SansSemiBold';
+  src: url(../fonts/OpenSans-SemiBold.ttf); }
+
+@font-face {
+  font-family: 'SansRegular';
+  src: url(../fonts/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: 'SansLight';
+  src: url(../fonts/OpenSans-Light.ttf); }
+
+/*# sourceMappingURL=fonts.css.map */

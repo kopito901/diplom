@@ -1,3 +1,8 @@
-@import './includes/reset';
+@import 'base_styles/reset';
+@import 'includes/fonts';
+@import 'base_styles/typography';
 
-@import './blocks/form'
+@import 'blocks/header';
+@import 'blocks/form';
+
+@import 'other';

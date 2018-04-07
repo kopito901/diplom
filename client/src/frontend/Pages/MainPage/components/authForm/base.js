@@ -1,5 +1,5 @@
 import { Component } from 'react';
-import Validate from '../../classes/validate';
+import Validate from '../../../../classes/validate';
 
 export default class AuthForm extends Component {
   constructor(props) {
