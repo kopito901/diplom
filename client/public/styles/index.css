@@ -41,8 +41,112 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+* {
+  outline: none; }
+
+@font-face {
+  font-family: 'SansExtraBold';
+  src: url(../fonts/OpenSans-ExtraBold.ttf); }
+
+@font-face {
+  font-family: 'SansBold';
+  src: url(../fonts/OpenSans-Bold.ttf); }
+
+@font-face {
+  font-family: 'SansSemiBold';
+  src: url(../fonts/OpenSans-SemiBold.ttf); }
+
+@font-face {
+  font-family: 'SansRegular';
+  src: url(../fonts/OpenSans-Regular.ttf); }
+
+@font-face {
+  font-family: 'SansLight';
+  src: url(../fonts/OpenSans-Light.ttf); }
+
+h1 {
+  font-family: 'SansBold';
+  font-size: 28px; }
+
+h2 {
+  font-family: 'SansSemiBold';
+  font-size: 24px; }
+
+p, span {
+  font-family: 'SansRegular';
+  font-size: 14px; }
+
+.header {
+  background-color: #4a0072;
+  color: #fff; }
+  .header__wrapper {
+    position: relative;
+    width: 1240px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; }
+  .header__text {
+    height: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .header__text_title {
+      font-size: 22px;
+      line-height: 20px; }
+    .header__text_name {
+      font-size: 20px; }
+  .header__logo-wrapper {
+    display: flex; }
+  .header__logo_img a {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background: url(../img/logo.png) no-repeat;
+    background-size: cover; }
+  .header__contacts {
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    text-align: right; }
+    .header__contacts span {
+      margin-bottom: 10px;
+      font-size: 16px; }
+      .header__contacts span:last-child {
+        margin-bottom: 0; }
+  .header__auth {
+    text-decoration: underline;
+    cursor: pointer; }
+    .header__auth:hover {
+      text-decoration: none; }
+
 .form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 250px; }
+  .form_auth {
+    right: -10px;
+    bottom: -85px;
+    position: absolute;
+    padding: 10px;
+    background-color: #fff;
+    border: 0.5px solid #a4a4a4;
+    box-shadow: 0 4px 2px -2px #a4a4a4;
+    border-radius: 15px; }
+  .form__input {
+    padding: 3px 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 7px;
+    font-family: 'SansRegular';
+    font-size: 16px; }
+    .form__input_error {
+      box-shadow: 0px 0px 6px -1px #d65c5c;
+      border-color: #d65c5c; }
+
+body {
+  font-family: 'SansRegular'; }
 
 /*# sourceMappingURL=index.css.map */

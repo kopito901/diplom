@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "variables.css",
+	"sources": [
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"$primary: #7b1fa2;\n$primaryLight: #ae52d4;\n$primaryDark: #4a0072;\n$secondary: #757575;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": ""
+}

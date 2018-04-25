@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "typography.css",
+	"sources": [
+		"../../../src/frontend/styles/base_styles/typography.scss"
+	],
+	"sourcesContent": [
+		"h1 {\n  font-family: 'SansBold';\n  font-size: 28px;\n}\n\nh2 {\n  font-family: 'SansSemiBold';\n  font-size: 24px;\n}\n\np, span {\n  font-family: 'SansRegular';\n  font-size: 14px;\n}\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,EAAE,CAAC;EACD,WAAW,EAAE,UAAU;EACvB,SAAS,EAAE,IAAI,GAChB;;AAED,AAAA,EAAE,CAAC;EACD,WAAW,EAAE,cAAc;EAC3B,SAAS,EAAE,IAAI,GAChB;;AAED,AAAA,CAAC,EAAE,AAAA,IAAI,CAAC;EACN,WAAW,EAAE,aAAa;EAC1B,SAAS,EAAE,IAAI,GAChB"
+}
