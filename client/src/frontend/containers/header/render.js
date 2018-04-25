@@ -1,5 +1,6 @@
 import React from 'react';
 import AuthForm from '../authForm';
+import { connect } from 'react-redux';
 
 export default function(props, state) {
   return (
@@ -20,7 +21,7 @@ export default function(props, state) {
           <span>Канцелярия: 8 (495) 442-65-77</span>
           <span className="header__auth" onClick={this.handleClick}>Авторизация</span>
         </div>
-        <AuthForm />
+        <AuthForm ref={(form) => { this.authForm = form; }} />
       </div>
     </header>
   );

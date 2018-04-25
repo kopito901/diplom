@@ -18,22 +18,4 @@ export default class AuthForm extends Component {
       this.getData();
     }
   }
-
-  getData = async () => {
-    await fetch('/api/auth', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: new FormData(this.refs.form)
-    })
-      .then(res => {
-        res.json()
-          .then(data => {
-            if(data.status) {
-
-            }
-          });
-      });
-  }
 }

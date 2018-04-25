@@ -8,32 +8,31 @@ export default class AuthForm extends Component {
       response: ''
     }
 
-    this.getData = this.getData.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(e) {
     e.preventDefault();
-    if(Validate._validateForm(this.refs.form)) {
-      this.getData();
+    if(Validate._validateForm(this.authForm)) {
+      this.props.onTryLogin(this.loginInput.value, this.passInput.value);
     }
   }
 
-  getData = async () => {
-    await fetch('/api/auth', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json'
-      },
-      body: new FormData(this.refs.form)
-    })
-      .then(res => {
-        res.json()
-          .then(data => {
-            if(data.status) {
-
-            }
-          });
-      });
-  }
+  // getData = async () => {
+  //   await fetch('/api/auth', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Accept': 'application/json'
+  //     },
+  //     body: new FormData(this.refs.form)
+  //   })
+  //     .then(res => {
+  //       res.json()
+  //         .then(data => {
+  //           if(data.status) {
+  //
+  //           }
+  //         });
+  //     });
+  // }
 }
