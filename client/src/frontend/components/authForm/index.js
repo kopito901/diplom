@@ -9,17 +9,10 @@ class AuthForm extends Base {
 	}
 }
 
-export default connect(
-	(state, ownProps) => ({
-		users : state.user
-	}),
-	dispatch => ({
-		onTryLogin : (login, password) => {
-			const user = {
-				login: login,
-				password: password
-			};
-			dispatch({ type : 'TRY_LOGIN', payload : user });
-		}
-	})
-)(AuthForm);
+function mapStateToProps(state) {
+	return {
+		users : state.users
+	}
+};
+
+export default connect(mapStateToProps)(AuthForm);

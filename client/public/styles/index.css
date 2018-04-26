@@ -41,6 +41,10 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+a {
+  color: inherit;
+  text-decoration: inherit; }
+
 * {
   outline: none; }
 
@@ -124,6 +128,8 @@ p, span {
   display: flex;
   flex-direction: column;
   width: 250px; }
+  .form_hidden {
+    display: none; }
   .form_auth {
     right: -10px;
     bottom: -85px;

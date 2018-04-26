@@ -9,6 +9,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { createStore } from 'redux';
 
+import * as fetch from './frontend/classes/fetch';
+
 import MainPage from './frontend/Pages/MainPage';
 import PersonalPage from './frontend/Pages/PersonalPage';
 
@@ -19,21 +21,14 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-async function getData() {
-  const response = await fetch('/api/getUsers', {
-    method: 'GET',
-    headers: {
-      'Accept': 'application/json'
-    }
+fetch.getUsersList()
+  .then(usersList => {
+    store.dispatch({ type : 'GET_USERLIST', payload : usersList });
   });
-  const json = await response.json();
 
-  return json;
-};
-
-getData()
-  .then(data => {
-    store.dispatch({ type : 'INIT_USER', payload : data });
+fetch.loginViaCookies()
+  .then(user => {
+    store.dispatch({ type : 'AUTH_VIA_COOKIES', payload : user });
   });
 
 ReactDOM.render((
