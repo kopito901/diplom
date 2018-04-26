@@ -1,3 +1,8 @@
+import {
+  GET_USERLIST, TRY_LOGIN, AUTH_VIA_COOKIES
+} from '../actions/users';
+import * as fetch from '../classes/fetch';
+
 const initialState = {
   usersList : [],
   currentUser : {}
@@ -5,18 +10,28 @@ const initialState = {
 
 export default function playlists(state = initialState, action) {
   switch (action.type) {
-    case 'INIT_USER':
+    case GET_USERLIST:
       return Object.assign({}, state, {
         usersList : action.payload.users
       });
-    case 'TRY_LOGIN':
+
+    case AUTH_VIA_COOKIES:
       return Object.assign({}, state, {
-        currentUser: action.payload
+        currentUser: action.payload.user
       });
-    case 'ADD_USER':
-      return Object.assign({}, state, {
-        currentUser: 'qwe'
-      });
+
+    case TRY_LOGIN:
+      let data = action.payload
+
+      if(data.status) {
+        return Object.assign({}, state, {
+          currentUser: data.user
+        });
+      } else {
+        return Object.assign({}, state);
+      }
+      break;
+
     default:
       return state;
   }

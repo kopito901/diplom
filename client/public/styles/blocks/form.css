@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   width: 250px; }
+  .form_hidden {
+    display: none; }
   .form_auth {
     right: -10px;
     bottom: -85px;

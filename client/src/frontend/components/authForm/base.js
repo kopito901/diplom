@@ -1,12 +1,17 @@
 import { Component } from 'react';
+import { bindActionCreators } from 'redux';
 import Validate from '../../classes/validate';
+import { tryLogin } from '../../actions/users';
+import * as fetch from '../../classes/fetch';
 
 export default class AuthForm extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      response: ''
-    }
+
+    const { dispatch } = props;
+    this.boundActions = bindActionCreators({
+       onTryLogin : tryLogin
+     }, dispatch);
 
     this.handleClick = this.handleClick.bind(this);
   }
@@ -14,25 +19,11 @@ export default class AuthForm extends Component {
   handleClick(e) {
     e.preventDefault();
     if(Validate._validateForm(this.authForm)) {
-      this.props.onTryLogin(this.loginInput.value, this.passInput.value);
+      fetch.loginViaData(this.loginInput.value, this.passInput.value)
+        .then(data => {
+          this.props.changeState();
+          this.boundActions.onTryLogin(data);
+        });
     }
   }
-
-  // getData = async () => {
-  //   await fetch('/api/auth', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json'
-  //     },
-  //     body: new FormData(this.refs.form)
-  //   })
-  //     .then(res => {
-  //       res.json()
-  //         .then(data => {
-  //           if(data.status) {
-  //
-  //           }
-  //         });
-  //     });
-  // }
 }
