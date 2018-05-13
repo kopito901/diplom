@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "admin.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/admin.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.admin {\n\n  &__title {\n    margin-bottom: 5px;\n  }\n}\n//\n// .admin {\n//\n//   &__title {\n//     margin-bottom: 10px;\n//   }\n//\n//   &__nav {\n//     margin-bottom: 15px;\n//     background-color: $secondary;\n//     color: $white;\n//\n//     &_item {\n//       width: 25%;\n//       text-align: center;\n//\n//       &:hover {\n//         background-color: $red;\n//       }\n//     }\n//\n//     &_link {\n//       display: block;\n//       padding: 15px 0;\n//     }\n//   }\n//\n//   &__list {\n//     display: flex;\n//     justify-content: space-between;\n//\n//     &_item {\n//\n//     }\n//   }\n//\n//   &__students-list {\n//\n//     &_controls {\n//\n//       &--filters {\n//         display: flex;\n//         flex-direction: column;\n//         justify-content: space-between;\n//       }\n//\n//       &--buttons {\n//         margin: 15px 0;\n//         width: fit-content;\n//         float: right;\n//       }\n//\n//       &--button {\n//         margin-right: 10px;\n//\n//         &:last-child {\n//           margin-right: 0;\n//         }\n//       }\n//     }\n//   }\n//\n//   // &__table {\n//   //   width: 100%;\n//   // }\n//   //\n// }\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAIE,AAAA,aAAQ,CAAC;EACP,aAAa,EAAE,GAAG,GACnB"
+}

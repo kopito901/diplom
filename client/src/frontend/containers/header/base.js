@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import * as fetch from '../../classes/fetch';
 
 export default class Header extends Component {
 	constructor(props) {
@@ -8,11 +9,23 @@ export default class Header extends Component {
 		}
 
 		this.changeState = this.changeState.bind(this);
+		this.exit = this.exit.bind(this);
   }
 
-	changeState() {
+	changeState(e) {
+		if(e) {
+			e.preventDefault();
+		}
 		this.setState({
 			isEnabledForm : !this.state.isEnabledForm
 		});
+	}
+
+	exit(e) {
+		e.preventDefault();
+		fetch.exit()
+			.then(() => {
+				window.location.reload();
+			});
 	}
 }

@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "students.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/students.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.students {\n  margin-bottom: 15px;\n\n  &__tab {\n    width: 500px;\n    margin-bottom: 7px;\n\n    &_links {\n      width: fit-content;\n\n      &--item {\n        display: inline-block;\n        padding: 2px 5px;\n        border: 1px solid black;\n        border-bottom: 0;\n        cursor: pointer;\n        font-size: 16px;\n\n        &:first-child {\n          border-radius: 4px 0 0 0;\n        }\n\n        &:nth-child(2) {\n          border-left: 0;\n          border-right: 0;\n        }\n\n        &:last-child {\n          border-radius: 0 4px 0 0;\n          border-right: 1px solid black;\n        }\n\n        &:hover {\n          background-color: #e9ecef;\n        }\n\n\n        &-active {\n          background-color: #6c757d;\n          color: $white;\n\n          &:hover {\n            background-color: #6c757d;\n          }\n        }\n      }\n    }\n\n    &_main {\n      padding: 7px 5px;\n      border: 1px solid black;\n    }\n  }\n\n  &__buttons {\n\n  }\n\n  &__table {\n\n    &_row {\n      cursor: pointer;\n    }\n  }\n}\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,SAAS,CAAC;EACR,aAAa,EAAE,IAAI,GA+DpB;EA7DC,AAAA,cAAM,CAAC;IACL,KAAK,EAAE,KAAK;IACZ,aAAa,EAAE,GAAG,GA+CnB;IA7CC,AAAA,oBAAO,CAAC;MACN,KAAK,EAAE,WAAW,GAsCnB;MApCC,AAAA,0BAAO,CAAC;QACN,OAAO,EAAE,YAAY;QACrB,OAAO,EAAE,OAAO;QAChB,MAAM,EAAE,eAAe;QACvB,aAAa,EAAE,CAAC;QAChB,MAAM,EAAE,OAAO;QACf,SAAS,EAAE,IAAI,GA6BhB;QAnCD,AAQE,0BARK,AAQL,YAAa,CAAC;UACZ,aAAa,EAAE,SAAS,GACzB;QAVH,AAYE,0BAZK,AAYL,UAAY,CAAA,AAAA,CAAC,EAAE;UACb,WAAW,EAAE,CAAC;UACd,YAAY,EAAE,CAAC,GAChB;QAfH,AAiBE,0BAjBK,AAiBL,WAAY,CAAC;UACX,aAAa,EAAE,SAAS;UACxB,YAAY,EAAE,eAAe,GAC9B;QApBH,AAsBE,0BAtBK,AAsBL,MAAO,CAAC;UACN,gBAAgB,EAAE,OAAO,GAC1B;QAGD,AAAA,iCAAQ,CAAC;UACP,gBAAgB,EAAE,OAAO;UACzB,KAAK,ECpCP,IAAI,GDyCH;UAPD,AAIE,iCAJM,AAIN,MAAO,CAAC;YACN,gBAAgB,EAAE,OAAO,GAC1B;IAKP,AAAA,mBAAM,CAAC;MACL,OAAO,EAAE,OAAO;MAChB,MAAM,EAAE,eAAe,GACxB;EASD,AAAA,oBAAK,CAAC;IACJ,MAAM,EAAE,OAAO,GAChB"
+}

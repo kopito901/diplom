@@ -2,7 +2,13 @@
 @import 'includes/fonts';
 @import 'base_styles/typography';
 
+@import 'blocks/page';
+@import 'blocks/aside';
+@import 'blocks/modal';
 @import 'blocks/header';
+@import 'blocks/students';
 @import 'blocks/form';
+@import 'blocks/personal';
+@import 'blocks/admin';
 
 @import 'other';

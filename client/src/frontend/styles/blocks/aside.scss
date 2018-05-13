@@ -1,0 +1,45 @@
+@import '../includes/variables';
+
+.aside {
+  min-width: 200px;
+  padding: 10px 15px;
+  height: 100vh;
+  background-color: $primary;
+  color: $white;
+
+  &__user {
+    display: flex;
+
+    img {
+      margin-right: 5px;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      display: block;
+    }
+
+    &_name {
+      align-items: center;
+      display: flex;
+      font-size: 18px;
+    }
+  }
+
+  &__menu {
+    margin-top: 10px;
+  }
+
+  &__list {
+    font-size: 15px;
+
+    &_item {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      white-space: nowrap;
+    }
+
+    &_link {
+
+    }
+  }
+}

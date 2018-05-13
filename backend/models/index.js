@@ -9,7 +9,10 @@ const sequelize = new Sequelize(
     host: process.env.DATABASE_HOST,
     port: process.env.DATABASE_PORT,
     dialect: 'mysql',
-    logging: false
+    logging: false,
+    dialectOptions: {
+        charset: 'UTF8'
+    }
   }
 );
 const Op = Sequelize.op;

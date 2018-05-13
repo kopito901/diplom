@@ -1,0 +1,11 @@
+.page {
+
+  &__main {
+    display: flex;
+
+    &-block {
+      width: 100%;
+      padding: 12px 30px;
+    }
+  }
+}

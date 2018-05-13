@@ -21,8 +21,16 @@ export default class AuthForm extends Component {
     if(Validate._validateForm(this.authForm)) {
       fetch.loginViaData(this.loginInput.value, this.passInput.value)
         .then(data => {
-          this.props.changeState();
-          this.boundActions.onTryLogin(data);
+          if(data.status) {
+            this.loginInput.classList.remove('is-invalid');
+            this.passInput.classList.remove('is-invalid');
+            this.props.changeState();
+            this.boundActions.onTryLogin(data);
+          } else {
+            this.loginInput.classList.add('is-invalid');
+            this.passInput.classList.add('is-invalid');
+          }
+
         });
     }
   }

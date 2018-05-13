@@ -1,0 +1,11 @@
+.modal-window {
+  right: 28px;
+  bottom: -110px;
+  position: absolute;
+  padding: 10px;
+  background-color: #fff;
+  border: 0.5px solid #a4a4a4;
+  box-shadow: 0 4px 2px -2px #a4a4a4;
+  border-radius: 15px; }
+
+/*# sourceMappingURL=modal.css.map */

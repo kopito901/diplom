@@ -1,0 +1,28 @@
+.aside {
+  min-width: 200px;
+  padding: 10px 15px;
+  height: 100vh;
+  background-color: #3E3D59;
+  color: #fff; }
+  .aside__user {
+    display: flex; }
+    .aside__user img {
+      margin-right: 5px;
+      width: 30px;
+      height: 30px;
+      background-size: cover;
+      display: block; }
+    .aside__user_name {
+      align-items: center;
+      display: flex;
+      font-size: 18px; }
+  .aside__menu {
+    margin-top: 10px; }
+  .aside__list {
+    font-size: 15px; }
+    .aside__list_item {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      white-space: nowrap; }
+
+/*# sourceMappingURL=aside.css.map */

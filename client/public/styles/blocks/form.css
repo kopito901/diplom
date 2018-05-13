@@ -1,29 +1,22 @@
 .form {
   display: flex;
-  flex-direction: column;
-  width: 250px; }
-  .form_hidden {
-    display: none; }
+  flex-direction: column; }
+  .form-sm {
+    width: 30%; }
   .form_auth {
-    right: -10px;
-    bottom: -85px;
-    position: absolute;
-    padding: 10px;
-    background-color: #fff;
-    border: 0.5px solid #a4a4a4;
-    box-shadow: 0 4px 2px -2px #a4a4a4;
-    border-radius: 15px; }
-  .form__input {
-    padding: 3px 10px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
-    font-family: 'SansRegular';
-    font-size: 16px; }
-    .form__input_error {
-      box-shadow: 0px 0px 6px -1px #d65c5c;
-      border-color: #d65c5c; }
+    width: 220px; }
+  .form_edit-email {
+    margin-bottom: 10px; }
+  .form-control {
+    margin-bottom: 5px; }
+  .form-select_search {
+    width: 55%; }
+  .form-group {
+    margin-bottom: 10px; }
+    .form-group label {
+      margin-bottom: 4px; }
+    .form-group_search {
+      margin-bottom: -5px;
+      width: 55%; }
 
 /*# sourceMappingURL=form.css.map */

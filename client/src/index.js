@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { Provider } from 'react-redux'
+import { Provider } from 'react-redux';
 import App from './frontend/App';
 import registerServiceWorker from './registerServiceWorker';
 
@@ -21,9 +21,9 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-fetch.getUsersList()
-  .then(usersList => {
-    store.dispatch({ type : 'GET_USERLIST', payload : usersList });
+fetch.getStudentsList()
+  .then(students => {
+    store.dispatch({ type : 'GET_STUDENTSLIST', payload : students });
   });
 
 fetch.loginViaCookies()
