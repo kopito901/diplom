@@ -1,4 +1,24 @@
 body {
   font-family: 'SansRegular'; }
 
+.body-scrolling .page__main-block {
+  width: calc(100% - 200px);
+  margin-left: 200px; }
+
+.body-scrolling .aside {
+  position: fixed;
+  top: 0; }
+
+.buttons_group .btn {
+  margin-right: 0px;
+  border-radius: 0; }
+  .buttons_group .btn:first-child {
+    border-radius: .2rem 0 0 .2rem; }
+  .buttons_group .btn:last-child {
+    margin-right: 0;
+    border-radius: 0 .2rem .2rem 0; }
+
+.hidden {
+  display: none; }
+
 /*# sourceMappingURL=other.css.map */

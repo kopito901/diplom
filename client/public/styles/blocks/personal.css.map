@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "personal.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/personal.scss"
+	],
+	"sourcesContent": [
+		"// @import '../includes/variables';\n//\n// .personal {\n//\n//   &__wrapper {\n//     position: relative;\n//     width: 1240px;\n//     margin: 0 auto;\n//   }\n// }\n"
+	],
+	"names": [],
+	"mappings": ""
+}

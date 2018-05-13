@@ -2,11 +2,13 @@
 	"version": 3,
 	"file": "other.css",
 	"sources": [
-		"../../src/frontend/styles/other.scss"
+		"../../src/frontend/styles/other.scss",
+		"../../src/frontend/styles/includes/variables.scss"
 	],
 	"sourcesContent": [
-		"body {\n  font-family: 'SansRegular';\n}\n"
+		"@import './includes/variables';\n\nbody {\n  font-family: 'SansRegular';\n}\n\n.body-scrolling {\n\n  .page__main-block {\n    width: calc(100% - 200px);\n    margin-left: 200px;\n  }\n\n  .aside {\n    position: fixed;\n    top: 0;\n  }\n}\n\n.buttons_group {\n  .btn {\n    margin-right: 0px;\n    border-radius: 0;\n\n    &:first-child {\n      border-radius: .2rem 0 0 .2rem;\n    }\n\n    &:last-child {\n      margin-right: 0;\n      border-radius: 0 .2rem .2rem 0;\n    }\n  }\n}\n\n.hidden {\n  display: none;\n}\n\n// .content-block {\n//   border: 1px solid black;\n//   border-radius: 15px;\n//   padding: 15px;\n//   box-sizing: border-box;\n//   box-shadow: 0 4px 2px -2px $secondaryLight;\n// }\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
 	],
 	"names": [],
-	"mappings": "AAAA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,aAAa,GAC3B"
+	"mappings": "AAEA,AAAA,IAAI,CAAC;EACH,WAAW,EAAE,aAAa,GAC3B;;AAED,AAEE,eAFa,CAEb,iBAAiB,CAAC;EAChB,KAAK,EAAE,kBAAkB;EACzB,WAAW,EAAE,KAAK,GACnB;;AALH,AAOE,eAPa,CAOb,MAAM,CAAC;EACL,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,CAAC,GACP;;AAGH,AACE,cADY,CACZ,IAAI,CAAC;EACH,YAAY,EAAE,GAAG;EACjB,aAAa,EAAE,CAAC,GAUjB;EAbH,AACE,cADY,CACZ,IAAI,AAIF,YAAa,CAAC;IACZ,aAAa,EAAE,eAAe,GAC/B;EAPL,AACE,cADY,CACZ,IAAI,AAQF,WAAY,CAAC;IACX,YAAY,EAAE,CAAC;IACf,aAAa,EAAE,eAAe,GAC/B;;AAIL,AAAA,OAAO,CAAC;EACN,OAAO,EAAE,IAAI,GACd"
 }

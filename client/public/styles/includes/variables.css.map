@@ -5,7 +5,7 @@
 		"../../../src/frontend/styles/includes/variables.scss"
 	],
 	"sourcesContent": [
-		"$primary: #7b1fa2;\n$primaryLight: #ae52d4;\n$primaryDark: #4a0072;\n$secondary: #757575;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
 	],
 	"names": [],
 	"mappings": ""

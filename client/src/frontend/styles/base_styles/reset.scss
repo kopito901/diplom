@@ -29,21 +29,20 @@ body {
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 a {
 	color: inherit;
 	text-decoration: inherit;
+
+  &:hover {
+    color: inherit;
+  }
+}
+
+button {
+
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 * {

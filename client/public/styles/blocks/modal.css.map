@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "modal.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/modal.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.modal-window {\n  right: 28px;\n  bottom: -110px;\n  position: absolute;\n  padding: 10px;\n  background-color: $white;\n  border: .5px solid $secondaryLight;\n  box-shadow: 0 4px 2px -2px $secondaryLight;\n  border-radius: 15px;\n}\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,aAAa,CAAC;EACZ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,MAAM;EACd,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,gBAAgB,ECFV,IAAI;EDGV,MAAM,EAAE,KAAI,CAAC,KAAK,CCNH,OAAO;EDOtB,UAAU,EAAE,CAAC,CAAC,GAAG,CAAC,GAAG,CAAE,IAAG,CCPX,OAAO;EDQtB,aAAa,EAAE,IAAI,GACpB"
+}

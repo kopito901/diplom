@@ -4,18 +4,28 @@
   "scripts": {
     "client": "cd client && yarn start",
     "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail 'yarn server' 'yarn client'"
+    "dev": "concurrently --kill-others-on-fail 'yarn server' 'yarn client'",
+    "dropDB": "node_modules/.bin/sequelize db:seed:undo:all",
+    "initDB": "node_modules/.bin/sequelize db:seed:all"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
+    "bootstrap": "^4.1.1",
     "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "express-busboy": "^6.0.1",
     "jsonwebtoken": "^8.2.1",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.2",
-    "sequelize": "^4.37.1"
+    "react-pagination-table": "^2.0.2",
+    "react-redux": "^5.0.7",
+    "react-router-redux": "^4.0.8",
+    "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.2",
+    "sequelize": "^4.37.1",
+    "sequelize-cli": "^4.0.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"

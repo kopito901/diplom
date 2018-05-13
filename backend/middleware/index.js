@@ -14,18 +14,6 @@ module.exports = function(app, express) {
     )
     .done();
 
-  models.User.findAll().then(user => {
-    if(!user[0]) {
-      models.User.create({
-        name: 'Jora',
-        surname: 'qwe',
-        email: 'qwe@awe.qwe',
-        login: 'Jora',
-        password: 'Jora'
-      });
-    }
-  });
-
   busboy.extend(app);
 
   app.use(cookieParser());

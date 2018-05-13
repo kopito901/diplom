@@ -1,0 +1,75 @@
+@import '../includes/variables';
+
+.admin {
+
+  &__title {
+    margin-bottom: 5px;
+  }
+}
+//
+// .admin {
+//
+//   &__title {
+//     margin-bottom: 10px;
+//   }
+//
+//   &__nav {
+//     margin-bottom: 15px;
+//     background-color: $secondary;
+//     color: $white;
+//
+//     &_item {
+//       width: 25%;
+//       text-align: center;
+//
+//       &:hover {
+//         background-color: $red;
+//       }
+//     }
+//
+//     &_link {
+//       display: block;
+//       padding: 15px 0;
+//     }
+//   }
+//
+//   &__list {
+//     display: flex;
+//     justify-content: space-between;
+//
+//     &_item {
+//
+//     }
+//   }
+//
+//   &__students-list {
+//
+//     &_controls {
+//
+//       &--filters {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-between;
+//       }
+//
+//       &--buttons {
+//         margin: 15px 0;
+//         width: fit-content;
+//         float: right;
+//       }
+//
+//       &--button {
+//         margin-right: 10px;
+//
+//         &:last-child {
+//           margin-right: 0;
+//         }
+//       }
+//     }
+//   }
+//
+//   // &__table {
+//   //   width: 100%;
+//   // }
+//   //
+// }

@@ -1,0 +1,12 @@
+@import '../includes/variables';
+
+.modal-window {
+  right: 28px;
+  bottom: -110px;
+  position: absolute;
+  padding: 10px;
+  background-color: $white;
+  border: .5px solid $secondaryLight;
+  box-shadow: 0 4px 2px -2px $secondaryLight;
+  border-radius: 15px;
+}

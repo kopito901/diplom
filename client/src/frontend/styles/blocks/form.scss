@@ -3,36 +3,69 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 250px;
 
-  &_hidden {
-    display: none; 
+  &-sm {
+    width: 30%;
   }
 
   &_auth {
-    right: -10px;
-    bottom: -85px;
-    position: absolute;
-    padding: 10px;
-    background-color: $white;
-    border: .5px solid $secondaryLight;
-    box-shadow: 0 4px 2px -2px $secondaryLight;
-    border-radius: 15px;
+    width: 220px;
   }
 
-  &__input {
-    padding: 3px 10px;
+  &_edit-email {
     margin-bottom: 10px;
-    box-sizing: border-box;
-    width: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 7px;
-    font-family: 'SansRegular';
-    font-size: 16px;
+  }
 
-    &_error {
-      box-shadow: 0px 0px 6px -1px $error;
-      border-color: $error;
+  &-control {
+    margin-bottom: 5px;
+  }
+
+  &-select {
+
+    &_search {
+      width: 55%;
+    }
+  }
+
+  &-group {
+    margin-bottom: 10px;
+
+    label {
+      margin-bottom: 4px;
+    }
+
+    &_search {
+      margin-bottom: -5px;
+      width: 55%;
     }
   }
 }
+//
+// .form {
+//   display: flex;
+//   flex-direction: column;
+//   width: 250px;
+//
+//   &-control {
+//     margin-bottom: 10px;
+//   }
+//
+//   &-select {
+//     margin-bottom: 10px;
+//   }
+//
+//   &_hidden {
+//     display: none;
+//   }
+//
+//   &_auth {
+//     right: -10px;
+//     bottom: -85px;
+//     position: absolute;
+//     padding: 10px;
+//     background-color: $white;
+//     border: .5px solid $secondaryLight;
+//     box-shadow: 0 4px 2px -2px $secondaryLight;
+//     border-radius: 15px;
+//   }
+// }
