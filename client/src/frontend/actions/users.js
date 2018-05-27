@@ -1,4 +1,4 @@
-export const GET_USERLIST = 'GET_USERLIST';
+export const GET_USER_INFO = 'GET_USER_INFO';
 export const GET_STUDENTSLIST = 'GET_STUDENTSLIST';
 export const GET_BOSSESLIST = 'GET_BOSSESSLIST';
 export const TRY_LOGIN = 'TRY_LOGIN';
@@ -10,6 +10,10 @@ export function getStudentsList(students) {
 
 export function getBossesList() {
   return ({ type : GET_BOSSESLIST });
+}
+
+export function refreshCurrentUser(user) {
+  return ({ type : GET_USER_INFO, payload : user });
 }
 
 export function tryLogin(data) {

@@ -26,6 +26,19 @@ export default class AuthForm extends Component {
             this.passInput.classList.remove('is-invalid');
             this.props.changeState();
             this.boundActions.onTryLogin(data);
+            switch (data.user.AccessId) {
+              case 'a':
+                this.props.history.push('/lk/admin/studentsList');
+                break;
+              case 'z':
+                this.props.history.push('/lk/manager/personalPage');
+                break;
+              case 's':
+                this.props.history.push('/lk/student/personalPage');
+                break;
+              default:
+
+            }
           } else {
             this.loginInput.classList.add('is-invalid');
             this.passInput.classList.add('is-invalid');

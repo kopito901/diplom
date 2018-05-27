@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .form {
   display: flex;
   flex-direction: column; }
@@ -18,5 +19,7 @@
     .form-group_search {
       margin-bottom: -5px;
       width: 55%; }
+  .form .custom-file-label::after {
+    content: 'Выберите файл'; }
 
 /*# sourceMappingURL=form.css.map */

@@ -45,6 +45,90 @@ module.exports = function(sequelize) {
     }
   );
 
+  const Discipline = sequelize.define('Discipline', {
+      name: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Day = sequelize.define('Day', {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+      },
+      name: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Building = sequelize.define('Building', {
+      id: {
+        type: Sequelize.INTEGER,
+        primaryKey: true
+      },
+      name: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const BuildingSchedule = sequelize.define('BuildingSchedule', {
+
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Schedule = sequelize.define('Schedule', {
+      pairNumber: Sequelize.INTEGER,
+      isChange: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      }
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Marks = sequelize.define('Marks', {
+      date: Sequelize.STRING,
+      mark: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Practic = sequelize.define('Practic', {
+      title: Sequelize.STRING,
+      photo_url: Sequelize.STRING,
+      adress: Sequelize.STRING,
+      phone: Sequelize.STRING,
+      email: Sequelize.STRING,
+      site: Sequelize.STRING,
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Album = sequelize.define('Album', {
+      photo_url: Sequelize.STRING,
+      title: Sequelize.STRING,
+      description: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
   const Chancery = sequelize.define('Chancery', {
       email: Sequelize.STRING
     },
@@ -75,11 +159,35 @@ module.exports = function(sequelize) {
   Department.hasMany(Group);
   Group.belongsTo(Department);
 
+  Schedule.belongsTo(Group);
+  Schedule.belongsTo(Discipline);
+  Schedule.belongsTo(Day);
+
+  Album.belongsTo(Department);
+
+  BuildingSchedule.belongsTo(Day);
+  BuildingSchedule.belongsTo(Group);
+  BuildingSchedule.belongsTo(Building, {
+    foreignKey: {
+      field: 'BuildingId',
+      allowNull: false,
+      defaultValue: 1
+    },
+    onDelete: 'cascade'
+  });
+
+  Practic.belongsTo(Department);
+
+  Marks.belongsTo(Discipline);
+  Marks.belongsTo(User);
+
+
   User.belongsTo(Access);
   User.belongsTo(Course);
-  User.belongsTo(Group)
+  User.belongsTo(Group);
+  User.belongsTo(Practic);
 
   return {
-    Access, User, Course, Department, Group, Chancery
+    Access, User, Course, Department, Group, Chancery, Discipline, Marks, Schedule, Day, Building, Practic, Album
   }
 }

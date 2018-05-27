@@ -31,7 +31,7 @@ export default function(props, state) {
       <Link to="/" className="header__logo"></Link>
       <h1>Московский Приборостроительный Техникум</h1>
       { renderAuth(this) }
-      <AuthForm isEnabled={ this.state.isEnabledForm } changeState={ this.changeState }/>
+      <AuthForm isEnabled={ this.state.isEnabledForm } changeState={ this.changeState } history={ this.props.history } />
     </header>
   );
 }

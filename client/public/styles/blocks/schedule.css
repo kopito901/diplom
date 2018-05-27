@@ -1,0 +1,33 @@
+.schedule__week {
+  display: flex;
+  flex-wrap: wrap; }
+
+.schedule__day {
+  margin-bottom: 10px;
+  width: calc(100%/3);
+  box-shadow: 4px 5px 5px -3px #a4a4a4; }
+  .schedule__day_title {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 3px; }
+  .schedule__day_date {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .schedule__day_building {
+    margin-left: 10px; }
+
+.schedule__row_mark {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ced4da; }
+
+.schedule__row .form-control-changed {
+  background: #004085;
+  color: white; }
+
+.schedule__change {
+  display: flex; }
+
+/*# sourceMappingURL=schedule.css.map */

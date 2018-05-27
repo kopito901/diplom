@@ -1,0 +1,53 @@
+@import '../includes/variables';
+
+.tabs {
+  width: 500px;
+  margin-bottom: 7px;
+
+  &_links {
+    width: fit-content;
+
+    &--item {
+      display: inline-block;
+      padding: 2px 5px;
+      border: 1px solid black;
+      border-bottom: 0;
+      cursor: pointer;
+      font-size: 16px;
+      user-select: none;
+
+      &:first-child {
+        border-radius: 4px 0 0 0;
+      }
+
+      &:nth-child(2) {
+        border-left: 0;
+        border-right: 0;
+      }
+
+      &:last-child {
+        border-radius: 0 4px 0 0;
+        border-right: 1px solid black;
+      }
+
+      &:hover {
+        background-color: #e9ecef;
+      }
+
+
+      &-active {
+        background-color: #6c757d;
+        color: $white;
+
+        &:hover {
+          background-color: #6c757d;
+        }
+      }
+    }
+  }
+
+  &_main {
+    padding: 7px 5px;
+    border: 1px solid black;
+  }
+}

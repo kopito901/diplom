@@ -3,3 +3,4 @@
 .env
 /.vscode
 yarn-error.log
+client/public/uploads

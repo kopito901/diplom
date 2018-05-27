@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "tabs.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/tabs.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.tabs {\n  width: 500px;\n  margin-bottom: 7px;\n\n  &_links {\n    width: fit-content;\n\n    &--item {\n      display: inline-block;\n      padding: 2px 5px;\n      border: 1px solid black;\n      border-bottom: 0;\n      cursor: pointer;\n      font-size: 16px;\n      user-select: none;\n\n      &:first-child {\n        border-radius: 4px 0 0 0;\n      }\n\n      &:nth-child(2) {\n        border-left: 0;\n        border-right: 0;\n      }\n\n      &:last-child {\n        border-radius: 0 4px 0 0;\n        border-right: 1px solid black;\n      }\n\n      &:hover {\n        background-color: #e9ecef;\n      }\n\n\n      &-active {\n        background-color: #6c757d;\n        color: $white;\n\n        &:hover {\n          background-color: #6c757d;\n        }\n      }\n    }\n  }\n\n  &_main {\n    padding: 7px 5px;\n    border: 1px solid black;\n  }\n}\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAEA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,aAAa,EAAE,GAAG,GAgDnB;EA9CC,AAAA,WAAO,CAAC;IACN,KAAK,EAAE,WAAW,GAuCnB;IArCC,AAAA,iBAAO,CAAC;MACN,OAAO,EAAE,YAAY;MACrB,OAAO,EAAE,OAAO;MAChB,MAAM,EAAE,eAAe;MACvB,aAAa,EAAE,CAAC;MAChB,MAAM,EAAE,OAAO;MACf,SAAS,EAAE,IAAI;MACf,WAAW,EAAE,IAAI,GA6BlB;MApCD,AASE,iBATK,AASL,YAAa,CAAC;QACZ,aAAa,EAAE,SAAS,GACzB;MAXH,AAaE,iBAbK,AAaL,UAAY,CAAA,AAAA,CAAC,EAAE;QACb,WAAW,EAAE,CAAC;QACd,YAAY,EAAE,CAAC,GAChB;MAhBH,AAkBE,iBAlBK,AAkBL,WAAY,CAAC;QACX,aAAa,EAAE,SAAS;QACxB,YAAY,EAAE,eAAe,GAC9B;MArBH,AAuBE,iBAvBK,AAuBL,MAAO,CAAC;QACN,gBAAgB,EAAE,OAAO,GAC1B;MAGD,AAAA,wBAAQ,CAAC;QACP,gBAAgB,EAAE,OAAO;QACzB,KAAK,EClCL,IAAI,GDuCL;QAPD,AAIE,wBAJM,AAIN,MAAO,CAAC;UACN,gBAAgB,EAAE,OAAO,GAC1B;EAKP,AAAA,UAAM,CAAC;IACL,OAAO,EAAE,OAAO;IAChB,MAAM,EAAE,eAAe,GACxB"
+}

@@ -1,51 +1,89 @@
+const _ = require('lodash');
+
 const Sort = {
-    courseDescendingSort: function(userA, userB) {
-      if(userA.CourseId && userB.CourseId) {
-        return userB.CourseId - userA.CourseId;
+    nameDescendingSort: function(itemA, itemB) {
+      if(itemA.number && itemB.number) {
+        if(itemA.number < itemB.number) return 1;
+        if(itemA.number > itemB.number) return -1;
       } else {
         return 1;
       }
     },
 
-    courseAscendingSort: function(userA, userB) {
-      if(userA.CourseId && userB.CourseId) {
-        return userA.CourseId - userB.CourseId;
+    nameAscendingSort: function(itemA, itemB) {
+      if(itemA.number && itemB.number) {
+        if(itemA.number > itemB.number) return 1;
+        if(itemA.number < itemB.number) return -1;
       } else {
         return 1;
       }
     },
 
-    departmentDescendingSort: function(userA, userB) {
-        if(userA.Group && userB.Group) {
-          if(userA.Group.Department.number > userB.Group.Department.number) return 1;
-          if(userA.Group.Department.number < userB.Group.Department.number) return -1;
+    studentCountDescendingSort: function(itemA, itemB) {
+      if(!_.isUndefined(itemA.usersCount) && !_.isUndefined(itemB.usersCount)) {
+        if(itemA.usersCount < itemB.usersCount) return 1;
+        if(itemA.usersCount > itemB.usersCount) return -1;
+      } else {
+        return 1;
+      }
+    },
+
+    studentCountAscendingSort: function(itemA, itemB) {
+      if(!_.isUndefined(itemA.usersCount) && !_.isUndefined(itemB.usersCount)) {
+        if(itemA.usersCount > itemB.usersCount) return 1;
+        if(itemA.usersCount < itemB.usersCount) return -1;
+      } else {
+        return 1;
+      }
+    },
+
+    courseDescendingSort: function(itemA, itemB) {
+      if(itemA.CourseId && itemB.CourseId) {
+        return itemB.CourseId - itemA.CourseId;
+      } else {
+        return 1;
+      }
+    },
+
+    courseAscendingSort: function(itemA, itemB) {
+      if(itemA.CourseId && itemB.CourseId) {
+        return itemA.CourseId - itemB.CourseId;
+      } else {
+        return 1;
+      }
+    },
+
+    departmentDescendingSort: function(itemA, itemB) {
+        if(itemA.Group && itemB.Group) {
+          if(itemA.Group.Department.number > itemB.Group.Department.number) return 1;
+          if(itemA.Group.Department.number < itemB.Group.Department.number) return -1;
         } else {
           return 1;
         }
     },
 
-    departmentAscendingSort: function(userA, userB) {
-      if(userA.Group && userB.Group) {
-        if(userA.Group.Department.number < userB.Group.Department.number) return 1;
-        if(userA.Group.Department.number > userB.Group.Department.number) return -1;
+    departmentAscendingSort: function(itemA, itemB) {
+      if(itemA.Group && itemB.Group) {
+        if(itemA.Group.Department.number < itemB.Group.Department.number) return 1;
+        if(itemA.Group.Department.number > itemB.Group.Department.number) return -1;
       } else {
         return 1;
       }
     },
 
-    groupDescendingSort: function(userA, userB) {
-      if(userA.Group && userB.Group) {
-        if(userA.Group.number > userB.Group.number) return 1;
-        if(userA.Group.number < userB.Group.number) return -1;
+    groupDescendingSort: function(itemA, itemB) {
+      if(itemA.Group && itemB.Group) {
+        if(itemA.Group.number > itemB.Group.number) return 1;
+        if(itemA.Group.number < itemB.Group.number) return -1;
       } else {
         return 1;
       }
     },
 
-    groupAscendingSort: function(userA, userB) {
-      if(userA.Group && userB.Group) {
-        if(userA.Group.number < userB.Group.number) return 1;
-        if(userA.Group.number > userB.Group.number) return -1;
+    groupAscendingSort: function(itemA, itemB) {
+      if(itemA.Group && itemB.Group) {
+        if(itemA.Group.number < itemB.Group.number) return 1;
+        if(itemA.Group.number > itemB.Group.number) return -1;
       } else {
         return 1;
       }

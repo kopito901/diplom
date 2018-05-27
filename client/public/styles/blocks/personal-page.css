@@ -1,0 +1,15 @@
+.personal-page__container {
+  margin-top: 15px; }
+
+.personal-page__avatar {
+  background-color: #000;
+  background-size: cover;
+  width: 200px; }
+
+.personal-page__name {
+  margin-bottom: 5px; }
+
+.personal-page .tabs {
+  margin-top: 20px; }
+
+/*# sourceMappingURL=personal-page.css.map */

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -71,12 +72,14 @@ h2 {
 
 p, span {
   font-family: 'SansRegular';
-  font-size: 14px; }
+  font-size: 16px;
+  line-height: 22px; }
 
 .page__main {
   display: flex; }
   .page__main-block {
     width: 100%;
+    max-width: 88%;
     padding: 12px 30px; }
 
 .aside {
@@ -86,7 +89,8 @@ p, span {
   background-color: #3E3D59;
   color: #fff; }
   .aside__user {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .aside__user img {
       margin-right: 5px;
       width: 30px;
@@ -115,6 +119,38 @@ p, span {
   border: 0.5px solid #a4a4a4;
   box-shadow: 0 4px 2px -2px #a4a4a4;
   border-radius: 15px; }
+
+.tabs {
+  width: 500px;
+  margin-bottom: 7px; }
+  .tabs_links {
+    width: fit-content; }
+    .tabs_links--item {
+      display: inline-block;
+      padding: 2px 5px;
+      border: 1px solid black;
+      border-bottom: 0;
+      cursor: pointer;
+      font-size: 16px;
+      user-select: none; }
+      .tabs_links--item:first-child {
+        border-radius: 4px 0 0 0; }
+      .tabs_links--item:nth-child(2) {
+        border-left: 0;
+        border-right: 0; }
+      .tabs_links--item:last-child {
+        border-radius: 0 4px 0 0;
+        border-right: 1px solid black; }
+      .tabs_links--item:hover {
+        background-color: #e9ecef; }
+      .tabs_links--item-active {
+        background-color: #6c757d;
+        color: #fff; }
+        .tabs_links--item-active:hover {
+          background-color: #6c757d; }
+  .tabs_main {
+    padding: 7px 5px;
+    border: 1px solid black; }
 
 .header {
   display: flex;
@@ -204,9 +240,119 @@ p, span {
     .form-group_search {
       margin-bottom: -5px;
       width: 55%; }
+  .form .custom-file-label::after {
+    content: 'Выберите файл'; }
 
 .admin__title {
   margin-bottom: 5px; }
+
+.personal-page__container {
+  margin-top: 15px; }
+
+.personal-page__avatar {
+  background-color: #000;
+  background-size: cover;
+  width: 200px; }
+
+.personal-page__name {
+  margin-bottom: 5px; }
+
+.personal-page .tabs {
+  margin-top: 20px; }
+
+.student-block {
+  padding: 10px;
+  box-shadow: 0 4px 4px -4px #a4a4a4; }
+  .student-block_group .student-block__links {
+    justify-content: center; }
+  .student-block .row {
+    height: auto;
+    max-height: 250px; }
+  .student-block__avatar {
+    background-color: #000;
+    width: 100%; }
+  .student-block__count {
+    display: inline-block;
+    margin-top: 5px; }
+  .student-block__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 20px;
+    text-align: right; }
+    .student-block__links_item {
+      font-family: 'SansRegular';
+      font-size: 16px;
+      line-height: 22px; }
+
+.schedule__week {
+  display: flex;
+  flex-wrap: wrap; }
+
+.schedule__day {
+  margin-bottom: 10px;
+  width: calc(100%/3);
+  box-shadow: 4px 5px 5px -3px #a4a4a4; }
+  .schedule__day_title {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 3px; }
+  .schedule__day_date {
+    margin-left: 10px;
+    margin-right: 10px; }
+  .schedule__day_building {
+    margin-left: 10px; }
+
+.schedule__row_mark {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ced4da; }
+
+.schedule__row .form-control-changed {
+  background: #004085;
+  color: white; }
+
+.schedule__change {
+  display: flex; }
+
+.album__item {
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .album__item_info {
+    width: 100%;
+    padding: 15px 5px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white; }
+  .album__item_delete {
+    font-size: 45px;
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    right: 7px;
+    top: 7px;
+    cursor: pointer; }
+
+.album__slider {
+  margin: 0 auto;
+  width: 60%;
+  height: 400px; }
+  .album__slider .slick-slider, .album__slider .slick-list, .album__slider .slick-track, .album__slider .slick-slide, .album__slider .slick-slide > div {
+    height: 100%; }
+
+.album__controls {
+  margin-top: 50px; }
+  .album__controls .btn {
+    margin-top: 10px; }
+
+.album .slick-next:before, .album .slick-prev:before {
+  color: black; }
 
 body {
   font-family: 'SansRegular'; }
@@ -218,6 +364,12 @@ body {
 .body-scrolling .aside {
   position: fixed;
   top: 0; }
+
+.title {
+  margin: 10px; }
+
+.references li {
+  list-style: disc; }
 
 .buttons_group .btn {
   margin-right: 0px;

@@ -32,17 +32,17 @@ export default class StudentsControl extends Component {
       tabType = target.getAttribute('data-tab'),
       tabs = document.getElementById('js_tabs');
 
-    tabs.querySelectorAll(`.students__tab_links--item`).forEach((item) => {
-      item.classList.remove('students__tab_links--item-active');
+    tabs.querySelectorAll(`.tabs_links--item`).forEach((item) => {
+      item.classList.remove('tabs_links--item-active');
     });
 
-    tabs.querySelectorAll(`.students__tab_main--item`).forEach((item) => {
+    tabs.querySelectorAll(`.tabs_main--item`).forEach((item) => {
       item.classList.add('hidden');
     });
 
-    target.classList.add('students__tab_links--item-active');
+    target.classList.add('tabs_links--item-active');
 
-    tabs.querySelectorAll(`.students__tab_main--item[data-tab="${tabType}"]`)[0].classList.remove('hidden');
+    tabs.querySelectorAll(`.tabs_main--item[data-tab="${tabType}"]`)[0].classList.remove('hidden');
   }
 
   deleteStudent(e) {

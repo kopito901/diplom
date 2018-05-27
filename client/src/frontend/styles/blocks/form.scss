@@ -39,33 +39,11 @@
       width: 55%;
     }
   }
+
+  .custom-file-label {
+
+    &::after {
+      content: 'Выберите файл'
+    }
+  }
 }
-//
-// .form {
-//   display: flex;
-//   flex-direction: column;
-//   width: 250px;
-//
-//   &-control {
-//     margin-bottom: 10px;
-//   }
-//
-//   &-select {
-//     margin-bottom: 10px;
-//   }
-//
-//   &_hidden {
-//     display: none;
-//   }
-//
-//   &_auth {
-//     right: -10px;
-//     bottom: -85px;
-//     position: absolute;
-//     padding: 10px;
-//     background-color: $white;
-//     border: .5px solid $secondaryLight;
-//     box-shadow: 0 4px 2px -2px $secondaryLight;
-//     border-radius: 15px;
-//   }
-// }

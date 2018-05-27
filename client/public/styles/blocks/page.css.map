@@ -5,8 +5,8 @@
 		"../../../src/frontend/styles/blocks/page.scss"
 	],
 	"sourcesContent": [
-		".page {\n\n  &__main {\n    display: flex;\n\n    &-block {\n      width: 100%;\n      padding: 12px 30px;\n    }\n  }\n}\n"
+		".page {\n\n  &__main {\n    display: flex;\n\n    &-block {\n      width: 100%;\n      max-width: 88%;\n      padding: 12px 30px;\n    }\n  }\n}\n"
 	],
 	"names": [],
-	"mappings": "AAEE,AAAA,WAAO,CAAC;EACN,OAAO,EAAE,IAAI,GAMd;EAJC,AAAA,iBAAO,CAAC;IACN,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,SAAS,GACnB"
+	"mappings": "AAEE,AAAA,WAAO,CAAC;EACN,OAAO,EAAE,IAAI,GAOd;EALC,AAAA,iBAAO,CAAC;IACN,KAAK,EAAE,IAAI;IACX,SAAS,EAAE,GAAG;IACd,OAAO,EAAE,SAAS,GACnB"
 }

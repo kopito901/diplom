@@ -16,16 +16,22 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "express-busboy": "^6.0.1",
+    "fetch": "^1.1.0",
     "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.1",
+    "moment-range": "^4.0.1",
     "mysql": "^2.15.0",
     "mysql2": "^1.5.2",
+    "nodemailer": "^4.6.5",
     "react-pagination-table": "^2.0.2",
     "react-redux": "^5.0.7",
     "react-router-redux": "^4.0.8",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
     "sequelize": "^4.37.1",
-    "sequelize-cli": "^4.0.0"
+    "sequelize-cli": "^4.0.0",
+    "xoauth2": "^1.2.0"
   },
   "devDependencies": {
     "concurrently": "^3.5.0"

@@ -1,0 +1,38 @@
+.album__item {
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+  .album__item_info {
+    width: 100%;
+    padding: 15px 5px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white; }
+  .album__item_delete {
+    font-size: 45px;
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    right: 7px;
+    top: 7px;
+    cursor: pointer; }
+
+.album__slider {
+  margin: 0 auto;
+  width: 60%;
+  height: 400px; }
+  .album__slider .slick-slider, .album__slider .slick-list, .album__slider .slick-track, .album__slider .slick-slide, .album__slider .slick-slide > div {
+    height: 100%; }
+
+.album__controls {
+  margin-top: 50px; }
+  .album__controls .btn {
+    margin-top: 10px; }
+
+.album .slick-next:before, .album .slick-prev:before {
+  color: black; }
+
+/*# sourceMappingURL=album.css.map */

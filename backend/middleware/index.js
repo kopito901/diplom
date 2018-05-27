@@ -14,7 +14,12 @@ module.exports = function(app, express) {
     )
     .done();
 
-  busboy.extend(app);
+  busboy.extend(app,
+        {
+            upload : true,
+            path: 'uploads',
+            mimeTypeLimit: ['image/jpeg', 'image/png']
+        });
 
   app.use(cookieParser());
 };

@@ -8,6 +8,7 @@ h2 {
 
 p, span {
   font-family: 'SansRegular';
-  font-size: 14px; }
+  font-size: 16px;
+  line-height: 22px; }
 
 /*# sourceMappingURL=typography.css.map */

@@ -1,0 +1,22 @@
+@import '../includes/variables';
+
+.personal-page {
+
+  &__container {
+    margin-top: 15px;
+  }
+
+  &__avatar {
+    background-color: $black;
+    background-size: cover;
+    width: 200px;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+  }
+
+  .tabs {
+    margin-top: 20px;
+  }
+}

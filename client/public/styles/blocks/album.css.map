@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "album.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/album.scss"
+	],
+	"sourcesContent": [
+		".album {\n\n  &__item {\n    height: 100%;\n    position: relative;\n    background-size: cover;\n    background-position: center;\n    background-repeat: no-repeat;\n\n    &_info {\n      width: 100%;\n      padding: 15px 5px;\n      position: absolute;\n      bottom: 0;\n      background-color: rgba(0, 0, 0, 0.75);\n      color: white;\n    }\n\n    &_delete {\n      font-size: 45px;\n      position: absolute;\n      width: 30px;\n      height: 28px;\n      right: 7px;\n      top: 7px;\n      cursor: pointer;\n    }\n  }\n\n  &__slider {\n    margin: 0 auto;\n    width: 60%;\n    height: 400px;\n\n    .slick-slider, .slick-list, .slick-track, .slick-slide, .slick-slide > div {\n      height: 100%;\n    }\n  }\n\n  &__controls {\n    margin-top: 50px;\n\n    .btn {\n      margin-top: 10px;\n    }\n  }\n\n  .slick-next:before, .slick-prev:before {\n    color: black;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAEE,AAAA,YAAO,CAAC;EACN,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,QAAQ;EAClB,eAAe,EAAE,KAAK;EACtB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS,GAoB7B;EAlBC,AAAA,iBAAM,CAAC;IACL,KAAK,EAAE,IAAI;IACX,OAAO,EAAE,QAAQ;IACjB,QAAQ,EAAE,QAAQ;IAClB,MAAM,EAAE,CAAC;IACT,gBAAgB,EAAE,mBAAmB;IACrC,KAAK,EAAE,KAAK,GACb;EAED,AAAA,mBAAQ,CAAC;IACP,SAAS,EAAE,IAAI;IACf,QAAQ,EAAE,QAAQ;IAClB,KAAK,EAAE,IAAI;IACX,MAAM,EAAE,IAAI;IACZ,KAAK,EAAE,GAAG;IACV,GAAG,EAAE,GAAG;IACR,MAAM,EAAE,OAAO,GAChB;;AAGH,AAAA,cAAS,CAAC;EACR,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,KAAK,GAKd;EARD,AAKE,cALO,CAKP,aAAa,EALf,AAKiB,cALR,CAKQ,WAAW,EAL5B,AAK8B,cALrB,CAKqB,YAAY,EAL1C,AAK4C,cALnC,CAKmC,YAAY,EALxD,AAKyE,cALhE,CAKiD,YAAY,GAAG,GAAG,CAAC;IACzE,MAAM,EAAE,IAAI,GACb;;AAGH,AAAA,gBAAW,CAAC;EACV,UAAU,EAAE,IAAI,GAKjB;EAND,AAGE,gBAHS,CAGT,IAAI,CAAC;IACH,UAAU,EAAE,IAAI,GACjB;;AA5CL,AA+CE,MA/CI,CA+CJ,WAAW,AAAA,OAAO,EA/CpB,AA+CsB,MA/ChB,CA+CgB,WAAW,AAAA,OAAO,CAAC;EACrC,KAAK,EAAE,KAAK,GACb"
+}
