@@ -1,7 +1,7 @@
 import {
-  GET_USERLIST, GET_STUDENTSLIST, GET_BOSSESLIST, TRY_LOGIN, AUTH_VIA_COOKIES
+  GET_STUDENTSLIST, GET_BOSSESLIST,
+  TRY_LOGIN, AUTH_VIA_COOKIES, GET_USER_INFO
 } from '../actions/users';
-import * as fetch from '../classes/fetch';
 
 const initialState = {
   usersList : {
@@ -12,12 +12,12 @@ const initialState = {
 };
 
 export default function users(state = initialState, action) {
-  switch (action.type) { 
-    case GET_USERLIST:
+  switch (action.type) {
+    case GET_USER_INFO:
       return Object.assign({}, state, {
-        usersList : action.payload.users
+        currentUser : action.payload
       });
-
+      
     case GET_STUDENTSLIST:
       return Object.assign({}, state, {
         usersList : {

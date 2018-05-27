@@ -5,7 +5,8 @@
   background-color: #3E3D59;
   color: #fff; }
   .aside__user {
-    display: flex; }
+    display: flex;
+    align-items: center; }
     .aside__user img {
       margin-right: 5px;
       width: 30px;

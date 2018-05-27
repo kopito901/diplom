@@ -1,5 +1,4 @@
 import React from 'react';
-import AdminNav from '../../../components/adminNav';
 import StudentsList from '../studentsList';
 import DepartmentsList from '../departmentsList';
 import ManagersList from '../managersList';
@@ -29,8 +28,8 @@ export default function(props, state) {
     );
   } else {
     return (
-      <div className="">
-        <h1>Куки</h1>
+      <div className="page__main-block">
+        <h1>Пожалуйста, авторизуйтесь</h1>
       </div>
     );
   }

@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "personal-page.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/personal-page.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.personal-page {\n\n  &__container {\n    margin-top: 15px;\n  }\n\n  &__avatar {\n    background-color: $black;\n    background-size: cover;\n    width: 200px;\n  }\n\n  &__name {\n    margin-bottom: 5px;\n  }\n\n  .tabs {\n    margin-top: 20px;\n  }\n}\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAIE,AAAA,yBAAY,CAAC;EACX,UAAU,EAAE,IAAI,GACjB;;AAED,AAAA,sBAAS,CAAC;EACR,gBAAgB,ECHZ,IAAI;EDIR,eAAe,EAAE,KAAK;EACtB,KAAK,EAAE,KAAK,GACb;;AAED,AAAA,oBAAO,CAAC;EACN,aAAa,EAAE,GAAG,GACnB;;AAdH,AAgBE,cAhBY,CAgBZ,KAAK,CAAC;EACJ,UAAU,EAAE,IAAI,GACjB"
+}

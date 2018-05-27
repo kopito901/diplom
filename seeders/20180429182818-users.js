@@ -22,8 +22,8 @@ module.exports = {
         login: 'student1',
         password: 'student1',
         AccessId: 's',
-        CourseId: 1,
-        GroupId: 133,
+        CourseId: 4,
+        GroupId: 45,
       },
       {
         name: 'student2',
@@ -34,7 +34,7 @@ module.exports = {
         password: 'student2',
         AccessId: 's',
         CourseId: 2,
-        GroupId: 133
+        GroupId: 46
       },
       {
         name: 'boss',

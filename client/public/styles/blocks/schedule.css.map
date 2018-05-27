@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "schedule.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/schedule.scss",
+		"../../../src/frontend/styles/includes/variables.scss"
+	],
+	"sourcesContent": [
+		"@import '../includes/variables';\n\n.schedule {\n\n  &__week {\n    display: flex;\n    flex-wrap: wrap;\n  }\n\n  &__day {\n    margin-bottom: 10px;\n    width: calc(100%/3);\n    box-shadow: 4px 5px 5px -3px #a4a4a4;\n\n    &_title {\n      display: flex;\n      align-items: baseline;\n      margin-bottom: 3px;\n    }\n\n    &_date {\n      margin-left: 10px;\n      margin-right: 10px;\n    }\n\n    &_building {\n      margin-left: 10px;\n    }\n  }\n\n  &__row {\n\n    &_mark {\n      display: flex;\n      width: 30%;\n      align-items: center;\n      justify-content: center;\n      border: 1px solid #ced4da;\n    }\n\n    .form-control-changed {\n      background: #004085;\n      color: white;\n    }\n  }\n\n  &__change {\n    display: flex;\n  }\n}\n",
+		"$primary: #3E3D59;\n$secondary: #272639;\n$secondaryLight: #a4a4a4;\n$secondaryDark: #494949;\n$red: #E96765;\n$white: #fff;\n$black: #000;\n$error: #d65c5c;\n"
+	],
+	"names": [],
+	"mappings": "AAIE,AAAA,eAAO,CAAC;EACN,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI,GAChB;;AAED,AAAA,cAAM,CAAC;EACL,aAAa,EAAE,IAAI;EACnB,KAAK,EAAE,YAAY;EACnB,UAAU,EAAE,wBAAwB,GAgBrC;EAdC,AAAA,oBAAO,CAAC;IACN,OAAO,EAAE,IAAI;IACb,WAAW,EAAE,QAAQ;IACrB,aAAa,EAAE,GAAG,GACnB;EAED,AAAA,mBAAM,CAAC;IACL,WAAW,EAAE,IAAI;IACjB,YAAY,EAAE,IAAI,GACnB;EAED,AAAA,uBAAU,CAAC;IACT,WAAW,EAAE,IAAI,GAClB;;AAKD,AAAA,mBAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,KAAK,EAAE,GAAG;EACV,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;EACvB,MAAM,EAAE,iBAAiB,GAC1B;;AARH,AAUE,cAVI,CAUJ,qBAAqB,CAAC;EACpB,UAAU,EAAE,OAAO;EACnB,KAAK,EAAE,KAAK,GACb;;AAGH,AAAA,iBAAS,CAAC;EACR,OAAO,EAAE,IAAI,GACd"
+}

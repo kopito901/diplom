@@ -1,7 +1,8 @@
 const Validate = {
   _validateForm: function(form) {
     let inputs = form.querySelectorAll('.form-control'),
-      selects = form.querySelectorAll('.custom-select');
+      selects = form.querySelectorAll('.custom-select'),
+      files = form.querySelectorAll('.custom-file-input');
 
     for (var input in inputs) {
       if(inputs.hasOwnProperty(input)) {
@@ -22,6 +23,13 @@ const Validate = {
       }
     }
 
+    for (var file in files) {
+      if(files.hasOwnProperty(file)) {
+        files[file].classList.remove('is-invalid');
+        this._validateFile(files[file]);
+      }
+    }
+
     if(!form.querySelectorAll('.is-invalid').length) {
       return true;
     } else {
@@ -39,6 +47,22 @@ const Validate = {
   _validateSelect: function(select) {
     if(!select.value) {
       select.classList.add('is-invalid');
+      return false;
+    }
+  },
+
+  _validateFile: function(file) {
+    if(file.files[0]) {
+      let format = file.files[0].name.split('.')[file.files[0].name.split('.').length - 1];
+
+      if(format === 'jpg' || format === 'jpeg' || format === 'png') {
+        file.classList.remove('is-invalid');
+      } else {
+        file.classList.add('is-invalid');
+        return false;
+      }
+    } else {
+      file.classList.add('is-invalid');
       return false;
     }
   },

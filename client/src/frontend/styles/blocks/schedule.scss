@@ -1,0 +1,50 @@
+@import '../includes/variables';
+
+.schedule {
+
+  &__week {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__day {
+    margin-bottom: 10px;
+    width: calc(100%/3);
+    box-shadow: 4px 5px 5px -3px #a4a4a4;
+
+    &_title {
+      display: flex;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+
+    &_date {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    &_building {
+      margin-left: 10px;
+    }
+  }
+
+  &__row {
+
+    &_mark {
+      display: flex;
+      width: 30%;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ced4da;
+    }
+
+    .form-control-changed {
+      background: #004085;
+      color: white;
+    }
+  }
+
+  &__change {
+    display: flex;
+  }
+}

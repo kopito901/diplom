@@ -1,0 +1,51 @@
+.album {
+
+  &__item {
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &_info {
+      width: 100%;
+      padding: 15px 5px;
+      position: absolute;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.75);
+      color: white;
+    }
+
+    &_delete {
+      font-size: 45px;
+      position: absolute;
+      width: 30px;
+      height: 28px;
+      right: 7px;
+      top: 7px;
+      cursor: pointer;
+    }
+  }
+
+  &__slider {
+    margin: 0 auto;
+    width: 60%;
+    height: 400px;
+
+    .slick-slider, .slick-list, .slick-track, .slick-slide, .slick-slide > div {
+      height: 100%;
+    }
+  }
+
+  &__controls {
+    margin-top: 50px;
+
+    .btn {
+      margin-top: 10px;
+    }
+  }
+
+  .slick-next:before, .slick-prev:before {
+    color: black;
+  }
+}

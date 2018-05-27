@@ -15,8 +15,8 @@ export default class Nav extends Component {
 
   handleResize() {
     let aside = document.getElementById('aside');
-    
-    if(window.pageYOffset >= 70) {
+
+    if(window.pageYOffset >= 80) {
       document.body.classList.add('body-scrolling');
     } else {
       document.body.classList.remove('body-scrolling');

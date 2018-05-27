@@ -2,6 +2,7 @@
   display: flex; }
   .page__main-block {
     width: 100%;
+    max-width: 88%;
     padding: 12px 30px; }
 
 /*# sourceMappingURL=page.css.map */
