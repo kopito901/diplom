@@ -4,11 +4,15 @@ const busboy = require('express-busboy');
 const JWT = require('jsonwebtoken');
 const cookieParser = require('cookie-parser');
 const authorize = require('../utils/auth');
-const Validate = require('../controllers/validate');
+const Validate = require('../utils/validate');
 const sequelize = require('sequelize');
 const crypto = require('../utils/crypto');
 const fetchUrl = require("fetch").fetchUrl;
 const _ = require('lodash');
+const fs = require('fs');
+var officegen = require('officegen');
+var async = require ( 'async' );
+
 
 module.exports = function(app) {
   busboy.extend(app,
@@ -180,6 +184,55 @@ module.exports = function(app) {
     } else {
       res.json({ status: 403 });
     }
+  });
+
+  app.post('/api/v1/departments/info/set', (req, res) => {
+    function createInfo(data) {
+      models.DepartmentInfo.create({
+        DepartmentId: data.DepartmentId,
+        title: data.title,
+        text: data.text,
+        isAlbumActive: data.isAlbum
+      })
+        .then((data) => {
+          res.json({ status: 200 });
+        });
+    }
+
+    if(req.user && req.user.access === 'z') {
+      let data = req.body;
+
+      models.DepartmentInfo.findAll({
+        where: {
+          DepartmentId: data.DepartmentId
+        }
+      })
+        .then((infos) => {
+          if(!!infos[0]) {
+            infos.map((info) => {
+              info.destroy();
+            });
+            createInfo(data);
+          } else {
+            createInfo(data);
+          }
+        });
+    } else {
+      res.json({ status: 403 });
+    }
+  });
+
+  app.post('/api/v1/departments/info', (req, res) => {
+    let id = req.body.id;
+
+    models.DepartmentInfo.findAll({
+      where: {
+        DepartmentId: id
+      }
+    })
+      .then((data) => {
+        res.json(data)
+      });
   });
 
   app.get('/api/v1/departments/list', (req, res) => {
@@ -1027,7 +1080,6 @@ module.exports = function(app) {
         url += '&list_id=13818777';
 
         fetchUrl('https://api.unisender.com/ru/api/sendEmail?format=json&api_key=6uuku7szrq3oq8mtdtp5hpbcp6ama6ccgs8hypie&email=Jora <st_g.a.kopilov@mpt.ru>&sender_name=asd&sender_email=kopito901@gmail.com&subject=qwe&body=<h1>aaa</h1>&list_id=13818777',(err, meta, body)=> {
-          console.log(body.toString());
           res.json({ status: 200 });
         })
       }
@@ -1058,6 +1110,187 @@ module.exports = function(app) {
       models.Building.findAll()
         .then(buildings => {
           res.json(buildings);
+        });
+    } else {
+      res.json({ status: 403 });
+    }
+  });
+
+  app.post('/api/v1/routes/list', (req, res) => {
+    if(req.user) {
+      let id = req.body;
+
+      models.Route.findAll({
+        where: {
+          UserId: id
+        },
+        include: [
+          {
+            model: models.User,
+            include: [{
+              model: models.Group
+            }]
+          },
+          {
+            model: models.Discipline
+          }
+        ]
+      })
+        .then((data) => {
+          res.json(data);
+        });
+    } else {
+      res.json({ status: 403 });
+    }
+  });
+
+  app.post('/api/v1/routes/add', (req, res) => {
+    if(req.user && req.user.access === 'z') {
+      let data = req.body;
+
+      models.Route.create({
+        teacher: data.teacher,
+        typeRoute: data.typeRoute,
+        dateEnd: data.dateEnd,
+        DisciplineId: data.DisciplineId,
+        UserId: data.UserId,
+      })
+        .then((data) => {
+          res.json({ status: 200 });
+        });
+    } else {
+      res.json({ status: 403 });
+    }
+  });
+
+  app.post('/api/v1/routes/delete', (req, res) => {
+    if(req.user && req.user.access === 'z') {
+      let id = req.body;
+
+      models.Route.findById(id)
+        .then((data) => {
+          data.destroy();
+          res.json({ status: 200 });
+        });
+    } else {
+      res.json({ status: 403 });
+    }
+  });
+
+  app.post('/api/v1/routes/print', (req, res) => {
+    if(req.user) {
+      let data = req.body,
+        writeData = [data.typeRoute, data.teacher, data.group, data.fullname, data.typeRoute, data.dateEnd];
+
+        var docx = officegen ({
+        	type: 'docx',
+        	orientation: 'portrait',
+        	pageMargins: { top: 0, left: 0, bottom: 0, right: 0 }
+        	// The theme support is NOT working yet...
+        });
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('Министерство образования и науки Российской Федерации', {font_size: 14});
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('Федеральное государственное бюджетное образовательное учреждение ВПО', {font_size: 12});
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('«Российский экономический университет имени Г.В. Плеханова»', {font_size: 12});
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('Московский приборостроительный техникум', {font_size: 14, bold: true});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('НАПРАВЛЕНИЕ', {font_size: 16, bold: true});
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'center';
+        pObj.addText ('Для сдачи повторного ' + data.typeRoute + 'а', {font_size: 14});
+
+        docx.putPageBreak ();
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ('Преподаватель ' + data.teacher, {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ('Студент учебной группы ' + data.group, {font_size: 14});
+
+        var pObj = docx.createP ();
+        pObj.addText ( data.fullname, {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'направляется к вам для повторной пересдачи ' + data.typeRoute + 'а', {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'По дисциплине ' + data.discipline, {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'В результате пересдачи студент получил оценку:', {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'right';
+        pObj.addText ( '«___» ( _____________________)', {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'Преподаватель ________________ / _______________________________', {font_size: 14});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.options.align = 'right';
+        pObj.addText ( '«___»  _____________________', {font_size: 14});
+
+        docx.putPageBreak ();
+        docx.putPageBreak ();
+        docx.putPageBreak ();
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'Направление сдается студентом в кабинет №100 при наличии на руках зачетной книжки', {font_size: 14, bold: true, underline: true});
+
+        docx.putPageBreak ();
+
+        var pObj = docx.createP ();
+        pObj.addText ( 'Направление действительно по ' + data.dateEnd, {font_size: 14, bold: true});
+
+
+        var out = fs.createWriteStream ( 'out.docx' );
+
+        async.parallel ([
+        	function ( done ) {
+        		out.on ( 'close', function () {
+        			done ( null );
+        		});
+        		docx.generate ( out );
+
+            res.sendFile('/Users/jora/PhpstormProjects/diplom/out.docx', 'out.docx');
+        	}
+
+        ], function ( err ) {
+        	if ( err ) {
+        		console.log ( 'error: ' + err );
+        	} // Endif.
         });
     } else {
       res.json({ status: 403 });

@@ -14,6 +14,10 @@ export default class StudentsList extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      marks: []
+    }
+
     const { dispatch } = props;
     this.boundActions = bindActionCreators({
        getStudentsList: getStudentsList,

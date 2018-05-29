@@ -49,11 +49,14 @@ export default function(props, state) {
                 <li className='aside__list_item'>
                   <Link to='/lk/manager/photoalbum' className='aside__list_link'>Фотоальбом</Link>
                 </li>
-                <li className='aside__list_item'> 
+                <li className='aside__list_item'>
                   <Link to='/lk/manager/practics' className='aside__list_link'>Базы практик</Link>
                 </li>
                 <li className='aside__list_item'>
-                  <Link to='/lk/manager' className='aside__list_link'>Страница отделения</Link>
+                  <Link to='/lk/manager/page/edit' className='aside__list_link'>Редактирование</Link>
+                </li>
+                <li className='aside__list_item'>
+                  <Link to='/lk/manager/mainPage' className='aside__list_link'>Страница отделения</Link>
                 </li>
               </ul>
             </nav>
@@ -84,7 +87,10 @@ export default function(props, state) {
                     <Link to='/lk/student/references' className='aside__list_link'>Заказ справок</Link>
                   </li>
                   <li className='aside__list_item'>
-                    <Link to='/lk/student/print' className='aside__list_link'>Печать направлений</Link>
+                    <Link to='/lk/student/routes' className='aside__list_link'>Печать направлений</Link>
+                  </li>
+                  <li className='aside__list_item'>
+                    <Link to='/lk/student/mainPage' className='aside__list_link'>Страница отделения</Link>
                   </li>
                 </ul>
               </nav>

@@ -4,6 +4,8 @@ import Marks from '../marks';
 import Schedule from '../schedule';
 import BasePractic from '../basePractic';
 import References from '../references';
+import MainPage from '../../../../MainPage';
+import Routes from '../routes';
 import { Route } from 'react-router-dom';
 
 export default function(props, state) {
@@ -24,6 +26,8 @@ export default function(props, state) {
         <Route path='/lk/student/schedule' component={Schedule} />
         <Route path='/lk/student/practics' component={BasePractic} />
         <Route path='/lk/student/references' component={References} />
+        <Route path='/lk/student/mainPage' component={MainPage} />
+        <Route path='/lk/student/routes' component={Routes} />
       </div>
     );
   } else {

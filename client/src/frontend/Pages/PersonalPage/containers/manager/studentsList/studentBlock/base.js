@@ -10,10 +10,21 @@ export default class StudentBlock extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      marks: []
+    }
     const { dispatch } = props;
     this.boundActions = bindActionCreators({
        getStudentsList: getStudentsList
     }, dispatch);
+
+
+    fetch.getMarks(this.props.student.id)
+      .then((data) => {
+        this.setState({
+          marks: data
+        })
+      });
 
     this.changeBase = this.changeBase.bind(this);
   }
