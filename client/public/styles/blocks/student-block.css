@@ -16,7 +16,6 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 20px;
     text-align: right; }
     .student-block__links_item {
       font-family: 'SansRegular';

@@ -34,22 +34,22 @@ export default function(props, state) {
 
         <div className="form-group">
           <label htmlFor="studentName">Имя студента:</label>
-          <input type="text" className="form-control form-control-sm" placeholder="Введите имя" name="studentName" id="studentName" data-type='name' ref={(input) => this.name = input } value={ currentPickedUser.name } onChange={() => {}} />
+          <input type="text" className="form-control form-control-sm" placeholder="Введите имя" name="studentName" id="studentName" data-type='name' ref={(input) => this.name = input } defaultValue={ currentPickedUser.name } onChange={() => {}} />
         </div>
         <div className="form-group">
           <label htmlFor="studentSurname">Фамилия студента:</label>
-          <input type="text" className="form-control form-control-sm" placeholder="Введите фамилию" name="studentSurname" id="studentSurname" data-type='surname' ref={(input) => this.surname = input } value={ currentPickedUser.surname } onChange={() => {}} />
+          <input type="text" className="form-control form-control-sm" placeholder="Введите фамилию" name="studentSurname" id="studentSurname" data-type='surname' ref={(input) => this.surname = input } defaultValue={ currentPickedUser.surname } onChange={() => {}} />
         </div>
         <div className="form-group">
           <label htmlFor="studentPatronymic">Отчество студента:</label>
-          <input type="text" className="form-control form-control-sm" placeholder="Введите отчество" name="studentPatronymic" id="studentPatronymic" data-type='patronymic' ref={(input) => this.patronymic = input } value={ currentPickedUser.patronymic } onChange={() => {}} />
+          <input type="text" className="form-control form-control-sm" placeholder="Введите отчество" name="studentPatronymic" id="studentPatronymic" data-type='patronymic' ref={(input) => this.patronymic = input } defaultValue={ currentPickedUser.patronymic } onChange={() => {}} />
         </div>
         <div className="form-group">
           <label htmlFor="studentEmail">Email студента:</label>
-          <input type="text" className="form-control form-control-sm" placeholder="email" name="studentEmail" id="studentEmail" data-type='email' ref={(input) => this.email = input } value={ currentPickedUser.email } onChange={() => {}} />
+          <input type="text" className="form-control form-control-sm" placeholder="email" name="studentEmail" id="studentEmail" data-type='email' ref={(input) => this.email = input } defaultValue={ currentPickedUser.email } onChange={() => {}} />
         </div>
         <div className="input-group form-group">
-          <select className="custom-select form-select" name="studentCourse" id="studentCourse" data-type='CourseId' ref={(input) => this.course = input } value={ currentPickedUser.CourseId } onChange={() => {}} >
+          <select className="custom-select form-select" name="studentCourse" id="studentCourse" data-type='CourseId' ref={(input) => this.course = input } defaultValue={ currentPickedUser.CourseId } onChange={() => {}} >
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -60,7 +60,7 @@ export default function(props, state) {
           </div>
         </div>
         <div className="input-group form-group">
-          <select className="custom-select form-select" name="studentDepartment" id="studentDepartment" onChange={ this.selectDepartment } data-type='' ref={(input) => this.department = input } value={ currentPickedUser.Group.DepartmentId }>
+          <select className="custom-select form-select" name="studentDepartment" id="studentDepartment" onChange={ this.selectDepartment } data-type='' ref={(input) => this.department = input } defaultValue={ currentPickedUser.Group.DepartmentId }>
             { getDepartments() }
           </select>
           <div className="input-group-append">
@@ -68,7 +68,7 @@ export default function(props, state) {
           </div>
         </div>
         <div className="input-group form-group">
-          <select className="custom-select form-select" name="studentGroup" id="studentGroup" data-type='' ref={(select) => this.group = select } onChange={() => {}} value={ currentPickedUser.GroupId } >
+          <select className="custom-select form-select" name="studentGroup" id="studentGroup" data-type='' ref={(select) => this.group = select } onChange={() => {}} defaultValue={ currentPickedUser.GroupId } >
             { getGroups() }
           </select>
           <div className="input-group-append">
@@ -78,7 +78,7 @@ export default function(props, state) {
         <button onClick={ this.editStudent }
           ref={(button) => this.addButton = button }
           className='btn btn-secondary btn-sm'
-          >Добавить студента</button>
+          >Изменить информацию</button>
       </form>
     );
   } else {

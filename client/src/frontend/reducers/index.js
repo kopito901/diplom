@@ -7,6 +7,8 @@ import studentData from './studentData';
 import schedule from './schedule';
 import album from './album';
 import practics from './practics';
+import mainPage from './mainPage';
+import routes from './routes';
 
 export default combineReducers({
   users : users,
@@ -16,4 +18,6 @@ export default combineReducers({
   schedule: schedule,
   album: album,
   practics: practics,
+  mainPage: mainPage,
+  routes: routes
 });

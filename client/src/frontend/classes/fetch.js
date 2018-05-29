@@ -92,6 +92,20 @@ export async function getUsersList() {
   return json;
 };
 
+export async function getDepartmentInfo(id) {
+  const response = await fetch('/api/v1/departments/info', createPostRequestBody({ id: id }));
+  const json = await response.json();
+
+  return json;
+};
+
+export async function setDepartmentInfo(data) {
+  const response = await fetch('/api/v1/departments/info/set', createPostRequestBody(data));
+  const json = await response.json();
+
+  return json;
+};
+
 export async function getDepartmentsList() {
   const response = await fetch('/api/v1/departments/list', createGetRequestBody());
   const json = await response.json();
@@ -329,6 +343,45 @@ export async function getBuildings() {
   const json = await response.json();
 
   return json;
+};
+
+export async function getRoutes(id) {
+  const response = await fetch('/api/v1/routes/list', createPostRequestBody(id));
+  const json = await response.json();
+
+  return json;
+};
+
+export async function addRoute(data) {
+  const response = await fetch('/api/v1/routes/add', createPostRequestBody(data));
+  const json = await response.json();
+
+  return json;
+};
+
+export async function deleteRoute(id) {
+  const response = await fetch('/api/v1/routes/delete', createPostRequestBody(id));
+  const json = await response.json();
+
+  return json;
+};
+
+export async function printDoc(data) {
+  fetch('/api/v1/routes/print', {
+    method: 'POST',
+    header: {
+      'Accept': 'application/vnd.wap.wmlscriptc, text/vnd.wap.wml, application/vnd.wap.xhtml+xml, application/xhtml+xml, text/html, multipart/mixed, */*'
+    },
+    credentials: 'include',
+    body: JSON.stringify(data)})
+      .then((data) => data.blob())
+      .then((blob) => {
+        var url = window.URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = "out.docx";
+            a.click();
+      });
 };
 
 export async function sendEmail(data) {

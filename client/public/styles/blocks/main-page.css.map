@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "main-page.css",
+	"sources": [
+		"../../../src/frontend/styles/blocks/main-page.scss"
+	],
+	"sourcesContent": [
+		".main-page {\n\n  &__wrapper {\n    width: 1100px;\n    margin: 30px auto 0;\n  }\n\n  &__title {\n    text-align: center;\n  }\n}\n"
+	],
+	"names": [],
+	"mappings": "AAEE,AAAA,mBAAU,CAAC;EACT,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,WAAW,GACpB;;AAED,AAAA,iBAAQ,CAAC;EACP,UAAU,EAAE,MAAM,GACnB"
+}

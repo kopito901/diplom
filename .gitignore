@@ -1,6 +1,5 @@
 /node_modules
 /client/node_modules
-.env
 /.vscode
 yarn-error.log
 client/public/uploads

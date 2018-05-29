@@ -278,7 +278,6 @@ p, span {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-right: 20px;
     text-align: right; }
     .student-block__links_item {
       font-family: 'SansRegular';
@@ -353,6 +352,13 @@ p, span {
 
 .album .slick-next:before, .album .slick-prev:before {
   color: black; }
+
+.main-page__wrapper {
+  width: 1100px;
+  margin: 30px auto 0; }
+
+.main-page__title {
+  text-align: center; }
 
 body {
   font-family: 'SansRegular'; }

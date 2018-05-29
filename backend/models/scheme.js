@@ -156,6 +156,29 @@ module.exports = function(sequelize) {
     }
   );
 
+  const DepartmentInfo = sequelize.define('DepartmentInfo', {
+      title: Sequelize.STRING,
+      text: Sequelize.TEXT,
+      isAlbumActive: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
+      }
+    },
+    {
+      timestamps: false
+    }
+  );
+
+  const Route = sequelize.define('Route', {
+      teacher: Sequelize.STRING,
+      typeRoute: Sequelize.STRING,
+      dateEnd: Sequelize.STRING
+    },
+    {
+      timestamps: false
+    }
+  );
+
   Department.hasMany(Group);
   Group.belongsTo(Department);
 
@@ -181,6 +204,10 @@ module.exports = function(sequelize) {
   Marks.belongsTo(Discipline);
   Marks.belongsTo(User);
 
+  DepartmentInfo.belongsTo(Department);
+
+  Route.belongsTo(User);
+  Route.belongsTo(Discipline);
 
   User.belongsTo(Access);
   User.belongsTo(Course);
@@ -188,6 +215,8 @@ module.exports = function(sequelize) {
   User.belongsTo(Practic);
 
   return {
-    Access, User, Course, Department, Group, Chancery, Discipline, Marks, Schedule, Day, Building, Practic, Album
+    Access, User, Course, Department, Group, 
+    Chancery, Discipline, Marks, Schedule, Day,
+    Building, Practic, Album, DepartmentInfo, Route
   }
 }
